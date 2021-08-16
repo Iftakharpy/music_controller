@@ -7,4 +7,7 @@ class Room(models.Model):
   host = models.CharField(max_length=50, unique=True)
   can_guest_pause = models.BooleanField(default=False)
   votes_to_skip = models.IntegerField(default=1)
-  create_at = models.DateTimeField(auto_now_add=True)
+  created_at = models.DateTimeField(auto_now_add=True)
+
+  def __str__(self) -> str:
+      return f"{self.code} - {self.host}"

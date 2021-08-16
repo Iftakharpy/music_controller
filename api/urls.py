@@ -3,5 +3,5 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('<str:message>', views.message),
+    path('room/', views.RoomView.as_view()),
 ]
